@@ -11,7 +11,14 @@ display a Teamspeak3 server in a tree view
 Play around with the demo on JSFiddle:
 https://jsfiddle.net/aureolacodes/uL7j18xq/
 
-## Requirements
+## Installation & requirements
+
+Either download the repository from github or use Bower to install the plugin
+as a dependency:
+
+```
+$ bower install jquery-ts3status --save
+```
 
 The following passage is a quote from the jQuery REST API TSViewer README file.
 

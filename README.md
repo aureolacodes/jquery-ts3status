@@ -6,6 +6,9 @@ Please note that there is also a more complex plugin in place, which will
 display a Teamspeak3 server in a tree view
 (https://github.com/planetteamspeak/jquery-ts3viewer).
 
+Play around with the demo on JSFiddle:
+https://jsfiddle.net/aureolacodes/uL7j18xq/
+
 ## Requirements
 
 The following passage is a quote from the jQuery REST API TSViewer README file.

@@ -1,0 +1,18 @@
+<!doctype HTML>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>jQuery Teamspeak 3 Status</title>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="../src/jquery.ts3status.js"></script>
+</head>
+<body>
+  <div id="ts3status"></div>
+  <script>
+    $('#ts3status').ts3status({
+      host: '82.211.30.15',
+      port: '9987'
+    });
+  </script>
+</body>
+</html>

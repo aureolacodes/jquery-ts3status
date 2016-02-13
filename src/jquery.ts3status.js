@@ -87,14 +87,18 @@
    *   Contains a result object. Will be null on error.
    */
   Ts3Status.prototype.render = function render(error, result) {
-    var output = '';
+    var output;
     if (error) {
-      output += '<div class="ts3-error">' + error.message + '</div>';
+      output = this.options.templateError
+        .replace('{{error}}', error.message);
     }
     else {
-      output += '<div class="ts3-name">' + result.name + ' (' + result.country + ')</div>';
-      output += '<div class="ts3-slots">Slots: ' + result.users + '/' + result.slots + '</div>';
-      output += '<a href="' + this.getConnectUrl() + '">Connect</a>';
+      output = this.options.templateSuccess
+        .replace('{{server}}', result.name)
+        .replace('{{country}}', result.country)
+        .replace('{{users}}', result.users)
+        .replace('{{slots}}', result.slots)
+        .replace('{{url}}', this.getConnectUrl());
     }
 
     this.element.html(output);
@@ -126,7 +130,9 @@
     port: '80',
     rate: 10000,
     onSuccess: function() {},
-    onError: function() {}
+    onError: function() {},
+    templateError: '<div class="ts3-error">{{error}}</div>',
+    templateSuccess: '<div class="ts3-name">{{server}}({{country}})</div><div class="ts3-slots">Slots: {{users}}/{{slots}}</div><a href="{{url}}">Connect</a>'
   };
 
   $.fn.ts3status = function ts3status(options) {

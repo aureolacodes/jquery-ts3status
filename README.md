@@ -73,6 +73,8 @@ The following options are available through the configuration object.
 | rate | 10000 | The plugin will update the server status every x milliseconds. The default value is 10000ms, so the status will be updated every 10 seconds. |
 | onSuccess | function() {} | Callback that runs after a successful request. Will get the api response as a parameter. Please check https://www.planetteamspeak.com/rest-api/ for more details on this. |
 | onError | function() {} | Callback that runs after a failed request. Will get the api response as a parameter. Please check https://www.planetteamspeak.com/rest-api/ for more details on this. |
+| templateError | ```<div class="ts3-error">{{error}}</div>``` | Template for errors. |
+| templateSuccess | ```<div class="ts3-name">{{server}}({{country}})</div><div class="ts3-slots">Slots: {{users}}/{{slots}}</div><a href="{{url}}">Connect</a>``` | Template for successful server updates. |
 
 ## Disclaimer
 
